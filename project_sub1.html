@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <div class="login">
+      <h1>첫번째 서브 페이지 입니다.</h1>
+
+      <!-- 네이버 로그인 버튼 노출 영역 -->
+      <div id="naver_id_login">
+        <img src="img/네이버-로그인-버튼.png" />
+      </div>
+    </div>
+    <!-- //네이버 로그인 버튼 노출 영역 -->
+
+    <!-- 네이버아디디로로그인 초기화 Script -->
+    <script type="text/javascript">
+      var naver_id_login = new naver_id_login(
+        'B3gTjVssCEcuYuCKIlF0',
+        'http://127.0.0.1:3004/project_sub2.html'
+      );
+      var state = naver_id_login.getUniqState();
+      naver_id_login.setButton('green', 2, 40);
+      naver_id_login.setDomain('.service.com');
+      // naver_id_login.setState(state);
+      // naver_id_login.setPopup();
+      naver_id_login.init_naver_id_login();
+
+      //https://nid.naver.com/oauth2.0/token?grant_type=delete&client_id=zea_ioXx1vRxE4j6zOP6&client_secret=pZWc4EFTfi&access_token=AAAAOJRUeVFnxEXY0vT7mUC6hEupHRqmiI2-YaKONz-8K1twX5ae4E4h0S7nn37VMd4Ies8YvDVCEpowXVhTrfpA4eg
+    </script>
+    <!-- // 네이버 로그인 초기화 Script -->
+  </body>
+</html>
